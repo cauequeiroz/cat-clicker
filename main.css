@@ -9,5 +9,36 @@
 
 /* General */
 body {
-	
+	width: 960px;
+	margin: 0 auto;
+}
+
+h1 {
+	font: 32px 'Courier New', monospace;
+	margin: 20px 0;
+	text-align: center;
+}
+
+/* Cats */
+.cat {
+	width: 33%;
+	float: left;
+	padding: 20px;
+}
+.cat-img {
+	width: 100%;
+}
+.cat-info {
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	padding: 10px;
+	margin-bottom: 5px;
+	overflow: auto;
+}
+.cat-name,
+.cat-count {
+	width: 50%;
+	float: left;
+	text-align: center;
+	color: #222;
 }
