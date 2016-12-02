@@ -20,8 +20,18 @@ h1 {
 }
 
 /* Cats */
+.cat-list {
+	float: left;
+	width: 40%;
+	text-align: center;
+}
+.cat-view {
+	float: right;
+	width: 40%;
+}
+
 .cat {
-	width: 33%;
+	width: 100%;
 	float: left;
 	padding: 20px;
 }

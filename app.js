@@ -9,28 +9,45 @@ var HTMLCat = '<div class="cat" data-id="%id%">\
 
 // Cat Model
 var cats = [
-	{name: 'Pixel', src:'cat-01', count:0},
-	{name: 'Davi', src:'cat-02', count:0}
+	{name: 'Pixel', src:'cat-01', count:5},
+	{name: 'Davi', src:'cat-02', count:1},
+	{name: 'Jerry', src:'cat-03', count:3}
 ];
 
-function generateCats() {
-	var l = cats.length,
+function init() {
+	
+	// generate cat list
+	generateCatList();
+
+}
+init();
+
+function generateCatList() {
+	var html = '',
+		num  = cats.length;
+
+	for ( var i=0; i<num; i++ ) {
+		html += '<li data-id="'+i+'">'+cats[i].name+'</li>';
+	}
+
+	document.querySelector('.cat-list').innerHTML = html;
+	document.querySelector('.cat-list').addEventListener('click', function(e) {
+		loadCat(e.target.getAttribute('data-id'));
+	}, false);
+}
+
+function loadCat(id) {
+	var $ctn = document.querySelector('.cat-view'),
 		html = '';
-	for (var i=0; i<l; i++) {
-		html += HTMLCat
-					.replace('%id%', i)
-					.replace('%name%', cats[i].name)
-					.replace('%count%', cats[i].count)
-					.replace('%src%', cats[i].src);
-	}
 
-	document.querySelector('.board').innerHTML = html;
+	html = HTMLCat
+			.replace('%id%', id)
+			.replace('%name%', cats[id].name)
+			.replace('%count%', cats[id].count)
+			.replace('%src%', cats[id].src);
 
-	var elems = document.querySelectorAll('.cat-img'),
-		l     = elems.length;
-	for ( var i=0; i<l; i++ ) {
-		elems[i].addEventListener('click', catClick, false);
-	}
+	$ctn.innerHTML = html;
+	$ctn.querySelector('.cat-img').addEventListener('click', catClick, false);
 }
 
 function catClick() {
@@ -39,5 +56,3 @@ function catClick() {
 
 	count.innerHTML = ++cats[i].count;
 }
-
-generateCats();
