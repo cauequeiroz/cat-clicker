@@ -32,7 +32,12 @@ function generateCatList() {
 	}
 
 	document.querySelector('.cat-list ul').innerHTML = html;
-	document.querySelector('.cat-list ul').addEventListener('click', function(e) {		
+	document.querySelector('.cat-list ul').addEventListener('click', function(e) {
+		if ( document.querySelector('.selected') ) {
+			document.querySelector('.selected').classList.remove('selected');
+		}
+
+		e.target.classList.add('selected');
 		loadCat(e.target.getAttribute('data-id'));
 	}, false);
 }
