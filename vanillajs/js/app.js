@@ -1,3 +1,6 @@
+/* ==========================
+	Connect model and view
+   ========================== */
 var app = (function() {
 	return {
 		init: function() {
