@@ -2,21 +2,37 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Cat Cliker</title>
+	<title>Cat Clicker</title>
 
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
-	<!-- header -->
-	<header>
-		<h1>cat clicker</h1>
-	</header>
+	<div class="container">
 
-	<!-- cat board -->
-	<main class="main">
-		<ul class="cat-list"></ul>
-		<div class="cat-view"></div>
-	</main>
+		<!-- header -->
+		<header class="main-header">
+			<h1>cat clicker</h1>
+			<h2>Developed by Caue Queiroz</h2>
+		</header>
+
+		<!-- cat list -->
+		<section class="cat-list">
+			<div class="btn btn-large admin">add new cat</div>
+			<ul></ul>
+		</section>
+
+		<!-- add new cat -->
+		<section class="admin-form">
+			<input type="text" class="cat-name" placeholder="name">
+			<input type="text" class="cat-url" placeholder="image url">
+			<div class="btn cancel">cancel</div>
+			<div class="btn save">add</div>
+		</section>
+
+		<!-- cat view -->
+		<section class="cat-view"></section>
+	</div>
 
 	<script src="app.js"></script>
 </body>

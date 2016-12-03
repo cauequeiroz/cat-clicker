@@ -1,10 +1,10 @@
 // Cat Template
 var HTMLCat = '<div class="cat" data-id="%id%">\
-	<img class="cat-img" src="img/%src%.jpg">\
 	<p class="cat-info">\
 		<span class="cat-name">%name%</span>\
 		<span class="cat-count">%count%</span>\
 	</p>\
+	<img class="cat-img" src="img/%src%.jpg">\
 </div>';
 
 // Cat Model
@@ -19,6 +19,7 @@ function init() {
 	// generate cat list
 	generateCatList();
 
+	document.querySelectorAll('.cat-list li')[0].click();
 }
 init();
 
@@ -30,8 +31,8 @@ function generateCatList() {
 		html += '<li data-id="'+i+'">'+cats[i].name+'</li>';
 	}
 
-	document.querySelector('.cat-list').innerHTML = html;
-	document.querySelector('.cat-list').addEventListener('click', function(e) {
+	document.querySelector('.cat-list ul').innerHTML = html;
+	document.querySelector('.cat-list ul').addEventListener('click', function(e) {		
 		loadCat(e.target.getAttribute('data-id'));
 	}, false);
 }

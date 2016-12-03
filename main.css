@@ -1,4 +1,8 @@
-/* Reset */
+/*
+  ----------------------------------------
+  Reset & Basic styles
+  ----------------------------------------
+*/
 *,
 *:after,
 *:before {
@@ -6,49 +10,119 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
-/* General */
 body {
-	width: 960px;
+	background: #ecf0f1;
+	font: 16px 'Open Sans', Arial, sans-serif;
+	font-weight: 300;
+}
+.container {
+	width: 800px;
 	margin: 0 auto;
 }
 
-h1 {
-	font: 32px 'Courier New', monospace;
-	margin: 20px 0;
+/*
+  ----------------------------------------
+  Header
+  ----------------------------------------
+*/
+.main-header {
+	padding: 20px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	text-align: center;
+	margin-bottom: 25px;
+}
+h1,
+h2 {
+	font-weight: 300;
+}
+h2 {
+	font-size: 16px;
 }
 
-/* Cats */
-.cat-list {
-	float: left;
-	width: 40%;
-	text-align: center;
-}
+/*
+  ----------------------------------------
+  Cat View
+  ----------------------------------------
+*/
 .cat-view {
+	width: 600px;
+	text-align: center;
 	float: right;
-	width: 40%;
+}
+.cat-view p {
+	width: 100%;
+	border: 1px solid #bdc3c7;
+	border-radius: 4px;
+	padding: 10px 0;
+	margin-bottom: 10px;
+}
+.cat-view img {
+	width: 100%;
 }
 
-.cat {
-	width: 100%;
+/*
+  ----------------------------------------
+  Cat List
+  ----------------------------------------
+*/
+.cat-list {
+	width: 180px;
 	float: left;
-	padding: 20px;
 }
-.cat-img {
+.cat-list ul {
+	list-style: none;
+}
+.cat-list ul li {
 	width: 100%;
-}
-.cat-info {
-	border: 1px solid #ccc;
-	border-radius: 2px;
 	padding: 10px;
-	margin-bottom: 5px;
-	overflow: auto;
+	border-radius: 4px;
+	margin-bottom: 4px;
 }
-.cat-name,
-.cat-count {
-	width: 50%;
-	float: left;
+.cat-list ul li.selected,
+.cat-list ul li:hover {
+	background: #7f8c8d;
+	color: #ecf0f1;
+	cursor: pointer;
+	font-weight: 400;
+}
+
+/*
+  ----------------------------------------
+  Admin
+  ----------------------------------------
+*/
+.btn {
+	width: 100px;
+	padding: 11px;
+	border-radius: 4px;
+	margin-bottom: 12px;
+	background: #2c3e50;
+	color: #ecf0f1;
+	cursor: pointer;
+	font-weight: 400;
 	text-align: center;
-	color: #222;
+	display: inline-block;
+	display: none;
+}
+.btn:hover {
+	background: #34495e;
+}
+.btn-large {
+	width: 100%;
+}
+
+.admin-form {
+	float: right;
+	width: 600px;
+	display: none;
+}
+.admin-form input {
+	padding: 11px;
+	width: 180px;
+	border: none;
+	border-radius: 4px;
+	margin-right: 10px;
+}
+.show {
+	display: block;
 }
