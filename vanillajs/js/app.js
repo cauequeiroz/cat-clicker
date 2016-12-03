@@ -1,9 +1,18 @@
 /* ==========================
-	Connect model and view
+
+	Cat Clicker
+	Developed by Caue Queiroz
+
    ========================== */
 var app = {
 	init: function() {
-		console.log('Initializate application...');
+		view.init();
+	},
+
+	getCatNames: function() {
+		return model.getAllCats().map(function(elem, index) {
+			return {id: index, name: elem.name};
+		});
 	}
 };
 
