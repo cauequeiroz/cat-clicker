@@ -57,9 +57,21 @@ h2 {
     border-radius: 4px;
     padding: 10px 0;
     margin-bottom: 10px;
+    position: relative;
 }
 .cat-view img {
     width: 100%;
+}
+.cat-view .cat-count {
+    margin-right: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.cat-view .cat-count:after {
+    content: '♥';
+    color: #e74c3c;
+    padding: 0 5px;
 }
 
 /*
