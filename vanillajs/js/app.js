@@ -18,11 +18,12 @@ var app = {
 	clickList: function(e) {
 		if ( e.target.tagName !== 'LI' ) return;
 
-		var click = e.target.getAttribute('data-id');
+		var id = e.target.getAttribute('data-id');
 
-		if ( click !== model.getCurrent() ) {
-			model.setCurrent(click);
+		if ( id !== model.getCurrent() ) {
+			model.setCurrent(id);
 			view.updateList();
+			view.renderCat();
 		}
 	}
 };

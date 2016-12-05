@@ -22,12 +22,24 @@ var view = {
 		}
 
 		elem.classList.add('selected');
-		console.log('mudou');
+	},
+
+	renderCat: function() {
+		var cat  = model.getCat();
+
+		var html = this.$cat
+				   .replace('%id%', model.getCurrent())
+				   .replace('%name%', cat.name)
+				   .replace('%count%', cat.count)
+				   .replace('%src%', cat.src);
+
+		this.$view.innerHTML = html;
 	},
 
 	init: function() {
 		this.$list = document.querySelector('.cat-list ul');
 		this.$view = document.querySelector('.cat-view');
+		this.$cat  = document.querySelector('.cat-template').innerHTML;
 
 		this.renderList();
 

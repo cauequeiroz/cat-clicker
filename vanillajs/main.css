@@ -46,6 +46,8 @@ h2 {
 */
 .cat-view {
 	width: 600px;
+	max-height: 458px;
+	overflow: hidden;
 	text-align: center;
 	float: right;
 }

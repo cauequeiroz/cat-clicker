@@ -21,5 +21,9 @@ var model = {
 
 	getAllCats: function() {
 		return this.cats;
+	},
+
+	getCat: function() {
+		return this.cats[this.currentCat];
 	}
 };
