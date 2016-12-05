@@ -25,5 +25,9 @@ var model = {
 
 	getCat: function() {
 		return this.cats[this.currentCat];
+	},
+
+	updateCat: function() {
+		this.cats[this.currentCat].count++;
 	}
 };

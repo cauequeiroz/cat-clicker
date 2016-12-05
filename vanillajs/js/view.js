@@ -36,6 +36,12 @@ var view = {
 		this.$view.innerHTML = html;
 	},
 
+	updateCat: function() {
+		var cat = model.getCat();
+
+		this.$view.querySelector('.cat-count').innerHTML = cat.count;
+	},
+
 	init: function() {
 		this.$list = document.querySelector('.cat-list ul');
 		this.$view = document.querySelector('.cat-view');
@@ -44,5 +50,6 @@ var view = {
 		this.renderList();
 
 		this.$list.addEventListener('click', app.clickList, false);
+		this.$view.addEventListener('click', app.clickView, false);
 	}
 };

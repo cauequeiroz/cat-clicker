@@ -25,6 +25,13 @@ var app = {
 			view.updateList();
 			view.renderCat();
 		}
+	},
+
+	clickView: function(e) {
+		if ( e.target.tagName !== 'IMG' ) return;
+
+		model.updateCat();
+		view.updateCat();
 	}
 };
 
