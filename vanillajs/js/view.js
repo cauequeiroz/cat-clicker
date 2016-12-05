@@ -51,5 +51,8 @@ var view = {
 
 		this.$list.addEventListener('click', app.clickList, false);
 		this.$view.addEventListener('click', app.clickView, false);
+
+		this.updateList();
+		this.renderCat();
 	}
 };
