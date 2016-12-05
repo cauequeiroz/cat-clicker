@@ -9,6 +9,8 @@ var model = {
 		{ name: 'Tom', src: 'cat-04', count: 0 }
 	],
 
+	currentCat: 0,
+
 	getAllCats: function() {
 		return this.cats;
 	}

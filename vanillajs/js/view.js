@@ -12,10 +12,25 @@ var view = {
 		this.$list.innerHTML = html;
 	},
 
+	updateList: function() {
+		var cat  = model.currentCat,
+			prev = document.querySelector('.selected'),
+			elem = document.querySelectorAll('.cat-list li')[cat];
+
+		if ( prev ) {
+			prev.classList.remove('selected');
+		}
+
+		elem.classList.add('selected');
+		console.log('mudou');
+	},
+
 	init: function() {
 		this.$list = document.querySelector('.cat-list ul');
 		this.$view = document.querySelector('.cat-view');
 
 		this.renderList();
+
+		this.$list.addEventListener('click', app.clickList, false);
 	}
 };
