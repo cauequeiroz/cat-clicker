@@ -2,6 +2,17 @@
     View
    ========================== */
 var view = {
+    init: function() {
+        this.$list = document.querySelector('.cat-list ul');
+        this.$view = document.querySelector('.cat-view');
+        this.$cat  = document.querySelector('.cat-template').innerHTML;
+
+        this.renderList();
+
+        this.$list.addEventListener('click', app.clickList, false);
+        this.$view.addEventListener('click', app.clickView, false);
+    },
+    
     renderList: function() {
         var html = '';
         
@@ -12,9 +23,8 @@ var view = {
         this.$list.innerHTML = html;
     },
 
-    updateList: function() {
-        var cat  = model.getCurrent(),
-            prev = document.querySelector('.selected'),
+    updateList: function(cat) {
+        var prev = document.querySelector('.selected'),
             elem = document.querySelectorAll('.cat-list li')[cat];
 
         if ( prev ) {
@@ -24,11 +34,9 @@ var view = {
         elem.classList.add('selected');
     },
 
-    renderCat: function() {
-        var cat  = model.getCat();
-
+    renderCat: function(cat, id) {
         var html = this.$cat
-                   .replace('%id%', model.getCurrent())
+                   .replace('%id%', id)
                    .replace('%name%', cat.name)
                    .replace('%count%', cat.count)
                    .replace('%src%', cat.src);
@@ -36,20 +44,7 @@ var view = {
         this.$view.innerHTML = html;
     },
 
-    updateCat: function() {
-        var cat = model.getCat();
-
+    updateCat: function(cat) {
         this.$view.querySelector('.cat-count').innerHTML = cat.count;
-    },
-
-    init: function() {
-        this.$list = document.querySelector('.cat-list ul');
-        this.$view = document.querySelector('.cat-view');
-        this.$cat  = document.querySelector('.cat-template').innerHTML;
-
-        this.renderList();
-
-        this.$list.addEventListener('click', app.clickList, false);
-        this.$view.addEventListener('click', app.clickView, false);
     }
 };

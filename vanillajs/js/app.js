@@ -7,8 +7,9 @@
 var app = {
     init: function() {
         view.init();
-        view.updateList();
-        view.renderCat();
+
+        view.updateList(model.getCurrent());
+        view.renderCat(model.getCat(), model.getCurrent());
     },
 
     getCatNames: function() {
@@ -24,8 +25,8 @@ var app = {
 
         if ( id !== model.getCurrent() ) {
             model.setCurrent(id);
-            view.updateList();
-            view.renderCat();
+            view.updateList(id);
+            view.renderCat(model.getCat(), id);
         }
     },
 
@@ -33,7 +34,7 @@ var app = {
         if ( e.target.tagName !== 'IMG' ) return;
 
         model.updateCat();
-        view.updateCat();
+        view.updateCat(model.getCat());
     }
 };
 
