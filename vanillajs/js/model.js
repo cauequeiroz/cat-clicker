@@ -1,33 +1,33 @@
 /* ==========================
-	Model
+    Model
    ========================== */
 var model = {
-	cats: [
-		{ name: 'Pixel', src: 'cat-01', count: 5 },
-		{ name: 'Davi', src: 'cat-02', count: 1 },
-		{ name: 'Jerry', src: 'cat-03', count: 3 },
-		{ name: 'Tom', src: 'cat-04', count: 0 }
-	],
+    cats: [
+        { name: 'Pixel', src: 'cat-01', count: 5 },
+        { name: 'Davi', src: 'cat-02', count: 1 },
+        { name: 'Jerry', src: 'cat-03', count: 3 },
+        { name: 'Tom', src: 'cat-04', count: 0 }
+    ],
 
-	currentCat: 0,
+    currentCat: 0,
 
-	setCurrent: function(value) {
-		this.currentCat = value;
-	},
+    setCurrent: function(value) {
+        this.currentCat = value;
+    },
 
-	getCurrent: function() {
-		return this.currentCat;
-	},
+    getCurrent: function() {
+        return this.currentCat;
+    },
 
-	getAllCats: function() {
-		return this.cats;
-	},
+    getAllCats: function() {
+        return this.cats;
+    },
 
-	getCat: function() {
-		return this.cats[this.currentCat];
-	},
+    getCat: function() {
+        return this.cats[this.currentCat];
+    },
 
-	updateCat: function() {
-		this.cats[this.currentCat].count++;
-	}
+    updateCat: function() {
+        this.cats[this.currentCat].count++;
+    }
 };
