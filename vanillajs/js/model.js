@@ -3,11 +3,11 @@
    ========================== */
 var model = {
     cats: [
-        { name: 'Pixel', src: 'cat-01', count: 5 },
-        { name: 'Garfield', src: 'cat-02', count: 1 },
-        { name: 'Bichento', src: 'cat-03', count: 3 },
-        { name: 'Tom', src: 'cat-04', count: 0 },
-        { name: 'Buttercup', src: 'cat-05', count: 3 },
+        { name: 'Pixel', src: 'img/cat-01.jpg', count: 5 },
+        { name: 'Garfield', src: 'img/cat-02.jpg', count: 1 },
+        { name: 'Bichento', src: 'img/cat-03.jpg', count: 3 },
+        { name: 'Tom', src: 'img/cat-04.jpg', count: 0 },
+        { name: 'Buttercup', src: 'img/cat-05.jpg', count: 3 },
     ],
 
     currentCat: 0,
@@ -30,5 +30,13 @@ var model = {
 
     updateCat: function() {
         this.cats[this.currentCat].count++;
+    },
+
+    add: function(cat) {
+        this.cats.push({
+            name: cat.name,
+            src: cat.src,
+            count: 0
+        });
     }
 };

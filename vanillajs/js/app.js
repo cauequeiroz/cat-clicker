@@ -45,6 +45,22 @@ var app = {
         document.querySelector('.admin-form .name').value = '';
         document.querySelector('.admin-form .url').value = '';
         document.querySelector('.admin-form').style.display = 'none';
+    },
+
+    addCat: function() {
+        var name = document.querySelector('.admin-form .name').value,
+            url  = document.querySelector('.admin-form .url').value;
+
+        if ( !name || !url ) return;
+
+        model.add({ name: name, src: url });
+        model.setCurrent(model.getAllCats().length - 1);
+        
+        view.renderList();
+        view.updateList(model.getCurrent());
+        view.renderCat(model.getCat(), model.getCurrent());
+
+        app.hideAdmin();
     }
 };
 

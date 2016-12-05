@@ -110,6 +110,15 @@ h2 {
 }
 .btn-large {
     width: 100%;
+    background: none;
+    text-align: left;
+    color: inherit;
+    font-weight: inherit;
+    border: 1px solid #ecf0f1;
+}
+.btn-large:hover {
+    background: none;
+    border: 1px solid #ccc;
 }
 
 .admin-form {
