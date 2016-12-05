@@ -35,6 +35,16 @@ var app = {
 
         model.updateCat();
         view.updateCat(model.getCat());
+    },
+
+    showAdmin: function() {
+        document.querySelector('.admin-form').style.display = 'block';
+    },
+
+    hideAdmin: function() {
+        document.querySelector('.admin-form .name').value = '';
+        document.querySelector('.admin-form .url').value = '';
+        document.querySelector('.admin-form').style.display = 'none';
     }
 };
 

@@ -104,7 +104,6 @@ h2 {
     font-weight: 400;
     text-align: center;
     display: inline-block;
-    display: none;
 }
 .btn:hover {
     background: #34495e;
