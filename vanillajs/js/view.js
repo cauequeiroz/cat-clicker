@@ -11,8 +11,10 @@ var view = {
 
         this.$list.addEventListener('click', app.clickList, false);
         this.$view.addEventListener('click', app.clickView, false);
+        document.querySelector('.admin').addEventListener('click', app.showAdmin, false);
+        document.querySelector('.cancel').addEventListener('click', app.hideAdmin, false);
     },
-    
+
     renderList: function() {
         var html = '';
         
