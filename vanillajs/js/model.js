@@ -11,6 +11,14 @@ var model = {
 
 	currentCat: 0,
 
+	setCurrent: function(value) {
+		this.currentCat = value;
+	},
+
+	getCurrent: function() {
+		return this.currentCat;
+	},
+
 	getAllCats: function() {
 		return this.cats;
 	}

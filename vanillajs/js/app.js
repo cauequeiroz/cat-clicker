@@ -16,8 +16,12 @@ var app = {
 	},
 
 	clickList: function(e) {
-		model.currentCat = e.target.getAttribute('data-id');
-		view.updateList();
+		var click = e.target.getAttribute('data-id');
+
+		if ( click !== model.getCurrent() ) {
+			model.setCurrent(click);
+			view.updateList();
+		}
 	}
 };
 

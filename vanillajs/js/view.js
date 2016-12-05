@@ -13,7 +13,7 @@ var view = {
 	},
 
 	updateList: function() {
-		var cat  = model.currentCat,
+		var cat  = model.getCurrent(),
 			prev = document.querySelector('.selected'),
 			elem = document.querySelectorAll('.cat-list li')[cat];
 
