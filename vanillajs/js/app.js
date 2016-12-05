@@ -16,6 +16,8 @@ var app = {
 	},
 
 	clickList: function(e) {
+		if ( e.target.tagName !== 'LI' ) return;
+
 		var click = e.target.getAttribute('data-id');
 
 		if ( click !== model.getCurrent() ) {
