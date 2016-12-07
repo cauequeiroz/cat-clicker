@@ -10,14 +10,12 @@
 		<h2 data-bind="text: currentCat().name"></h2>
 		<h3 data-bind="text: currentCat().level"></h3>
 		<p data-bind="text: currentCat().count"></p>
-
-		<h3>Nicknames:</h3>
+		<h3>Nicknames</h3>
 		<ul data-bind="foreach: currentCat().nicks">
 			<li data-bind="text: $data"></li>
 		</ul>
-		<img src="" alt="cute cat" data-bind="attr: {src: currentCat().image}, click: increment">
 
-		
+		<img src="" alt="cute cat" data-bind="attr: {src: currentCat().image}, click: increment">
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
