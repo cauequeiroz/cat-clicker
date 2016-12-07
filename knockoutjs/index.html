@@ -18,7 +18,9 @@
 
         <!-- cat list -->
         <section class="cat-list">
-            <ul></ul>
+            <ul data-bind="foreach: catList">
+                <li data-bind="text: name"></li>
+            </ul>
             <div class="btn btn-large admin">+ add new cat</div>
         </section>
 
