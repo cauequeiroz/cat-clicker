@@ -19,7 +19,7 @@
         <!-- cat list -->
         <section class="cat-list">
             <ul data-bind="foreach: catList">
-                <li data-bind="text: name"></li>
+                <li data-bind="text: name, click: $parent.changeCat, css: { selected: $data === $root.currentCat() }"></li>
             </ul>
             <div class="btn btn-large admin">+ add new cat</div>
         </section>

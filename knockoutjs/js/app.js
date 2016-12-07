@@ -18,7 +18,11 @@ var App = function() {
     $this.increment = function() {
         var cat = $this.currentCat();
         cat.count( cat.count() + 1 );
-    }
+    };
+
+    $this.changeCat = function(cat, elem) {
+        $this.currentCat( cat );
+    };
 };
 
 ko.applyBindings( new App() );
