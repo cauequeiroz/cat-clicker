@@ -7,20 +7,21 @@
 <body>
 
 	<div>
-		<h2 data-bind="text: name"></h2>
-		<h3 data-bind="text: level"></h3>
-		<p data-bind="text: count"></p>
+		<h2 data-bind="text: currentCat().name"></h2>
+		<h3 data-bind="text: currentCat().level"></h3>
+		<p data-bind="text: currentCat().count"></p>
 
 		<h3>Nicknames:</h3>
-		<ul data-bind="foreach: nicks">
+		<ul data-bind="foreach: currentCat().nicks">
 			<li data-bind="text: $data"></li>
 		</ul>
-		<img src="" alt="cute cat" data-bind="attr: {src: image}, click: increment">
+		<img src="" alt="cute cat" data-bind="attr: {src: currentCat().image}, click: increment">
 
 		
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
+	<script src="model.js"></script>
 	<script src="app.js"></script>
 </body>
 </html>
