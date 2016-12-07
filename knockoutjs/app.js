@@ -1,8 +1,10 @@
 var App = function() {
-	this.currentCat = ko.observable( new Cat() );
+	var self = this;
 
-	this.increment = function() {
-		var cat = this.currentCat();
+	self.currentCat = ko.observable( new Cat() );
+
+	self.increment = function() {
+		var cat = self.currentCat();
 		cat.count( cat.count() + 1 );
 	}
 };
