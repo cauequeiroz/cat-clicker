@@ -6,7 +6,11 @@
 </head>
 <body>
 
-	
+	<div class="cat">
+		<h2 data-bind="text: name"></h2>
+		<div data-bind="text: count"></div>
+		<img src="" alt="cute cat" data-bind="attr: {src: image}, click: increment">
+	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
 	<script src="app.js"></script>
