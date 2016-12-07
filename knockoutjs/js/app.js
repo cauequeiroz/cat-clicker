@@ -34,15 +34,18 @@ var App = function() {
 
     $this.newCatName  = ko.observable('');
     $this.newCatImage = ko.observable('');
+
     $this.addCat = function() {
+        if ( $this.newCatImage() === '' && $this.newCatImage() === '' ) return;
+
         $this.catList.push( new Cat({
             name: $this.newCatName(),
             src: $this.newCatImage(),
             count: 0
         }) );
 
-        $this.newCatName  = ko.observable('');
-        $this.newCatImage = ko.observable('');
+        $this.newCatName('');
+        $this.newCatImage('');
 
         $this.hideAdmin();
 
