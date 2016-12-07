@@ -32,12 +32,12 @@
 
         <!-- cat view -->
         <section class="cat-view">
-            <div class="cat">
+            <div class="cat" data-bind="with: currentCat">
                 <p class="cat-info">
-                    <span class="cat-count"></span>
-                    <span class="cat-name"></span>
+                    <span class="cat-count" data-bind="text: count"></span>
+                    <span class="cat-name" data-bind="text: name"></span>
                 </p>
-                <img class="cat-img" src="">
+                <img class="cat-img" src="" data-bind="attr: {src: image}">
             </div>
         </section>
     </div>
