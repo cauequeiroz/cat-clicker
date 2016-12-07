@@ -7,6 +7,8 @@
 var App = function() {
     var $this = this;
 
+    // Get cats from model
+    // ========================================
     $this.catList = ko.observableArray([]);
     
     initialCats.forEach(function(cat_data) {
@@ -15,6 +17,8 @@ var App = function() {
 
     $this.currentCat = ko.observable( $this.catList()[0] );
 
+    // Increment count and change cat
+    // ========================================
     $this.increment = function() {
         var cat = $this.currentCat();
         cat.count( cat.count() + 1 );
@@ -24,6 +28,8 @@ var App = function() {
         $this.currentCat( cat );
     };
 
+    // Admin control stuff
+    // ========================================
     $this.canShowAdmin = ko.observable(false);
     $this.showAdmin = function() {
         $this.canShowAdmin(true);
@@ -32,6 +38,8 @@ var App = function() {
         $this.canShowAdmin(false);
     };
 
+    // Add new cat stuff
+    // ========================================
     $this.newCatName  = ko.observable('');
     $this.newCatImage = ko.observable('');
 
