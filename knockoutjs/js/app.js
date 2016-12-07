@@ -23,6 +23,31 @@ var App = function() {
     $this.changeCat = function(cat, elem) {
         $this.currentCat( cat );
     };
+
+    $this.canShowAdmin = ko.observable(false);
+    $this.showAdmin = function() {
+        $this.canShowAdmin(true);
+    };
+    $this.hideAdmin = function() {
+        $this.canShowAdmin(false);
+    };
+
+    $this.newCatName  = ko.observable('');
+    $this.newCatImage = ko.observable('');
+    $this.addCat = function() {
+        $this.catList.push( new Cat({
+            name: $this.newCatName(),
+            src: $this.newCatImage(),
+            count: 0
+        }) );
+
+        $this.newCatName  = ko.observable('');
+        $this.newCatImage = ko.observable('');
+
+        $this.hideAdmin();
+
+        $this.currentCat( $this.catList()[$this.catList().length - 1] );
+    }
 };
 
 ko.applyBindings( new App() );

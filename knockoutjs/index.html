@@ -21,15 +21,15 @@
             <ul data-bind="foreach: catList">
                 <li data-bind="text: name, click: $parent.changeCat, css: { selected: $data === $root.currentCat() }"></li>
             </ul>
-            <div class="btn btn-large admin">+ add new cat</div>
+            <div class="btn btn-large admin" data-bind="click: showAdmin">+ add new cat</div>
         </section>
 
         <!-- add new cat -->
-        <section class="admin-form">
-            <input type="text" class="name" placeholder="name">
-            <input type="text" class="url" placeholder="image url">
-            <div class="btn cancel">cancel</div>
-            <div class="btn save">add</div>
+        <section class="admin-form" data-bind="visible: canShowAdmin">
+            <input type="text" class="name" placeholder="name" data-bind="value: newCatName">
+            <input type="text" class="url" placeholder="image url" data-bind="value: newCatImage">
+            <div class="btn cancel" data-bind="click: hideAdmin">cancel</div>
+            <div class="btn save" data-bind="click: addCat">add</div>
         </section>
 
         <!-- cat view -->

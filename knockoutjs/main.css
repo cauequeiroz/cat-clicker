@@ -136,7 +136,6 @@ h2 {
 .admin-form {
     float: right;
     width: 600px;
-    display: none;
 }
 .admin-form input {
     padding: 11px;
