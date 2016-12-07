@@ -37,7 +37,7 @@
                     <span class="cat-count" data-bind="text: count"></span>
                     <span class="cat-name" data-bind="text: name"></span>
                 </p>
-                <img class="cat-img" src="" data-bind="attr: {src: image}">
+                <img class="cat-img" src="" data-bind="attr: {src: image}, click: $parent.increment">
             </div>
         </section>
     </div>

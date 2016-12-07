@@ -14,6 +14,11 @@ var App = function() {
     });
 
     $this.currentCat = ko.observable( $this.catList()[0] );
+
+    $this.increment = function() {
+        var cat = $this.currentCat();
+        cat.count( cat.count() + 1 );
+    }
 };
 
 ko.applyBindings( new App() );
