@@ -6,10 +6,18 @@
 </head>
 <body>
 
-	<div class="cat">
+	<div>
 		<h2 data-bind="text: name"></h2>
-		<div data-bind="text: count"></div>
+		<h3 data-bind="text: level"></h3>
+		<p data-bind="text: count"></p>
+
+		<h3>Nicknames:</h3>
+		<ul data-bind="foreach: nicks">
+			<li data-bind="text: $data"></li>
+		</ul>
 		<img src="" alt="cute cat" data-bind="attr: {src: image}, click: increment">
+
+		
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
