@@ -1,7 +1,7 @@
 var Cat = function(info) {
 	this.name  = ko.observable(info.name);
 	this.count = ko.observable(info.count);
-	this.image = ko.observable(info.image);
+	this.image = ko.observable(info.src);
 	this.nicks = ko.observableArray(info.nicks);
 
 	this.level = ko.computed(function() {
