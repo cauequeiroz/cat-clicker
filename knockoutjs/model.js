@@ -1,8 +1,8 @@
-var Cat = function() {
-	this.name  = ko.observable('Pixel');
-	this.count = ko.observable(2);
-	this.image = ko.observable('img/cat-01.jpg');
-	this.nicks = ko.observableArray(['Mr. P.', 'Pix', 'El', 'PewPew']);
+var Cat = function(info) {
+	this.name  = ko.observable(info.name);
+	this.count = ko.observable(info.count);
+	this.image = ko.observable(info.image);
+	this.nicks = ko.observableArray(info.nicks);
 
 	this.level = ko.computed(function() {
 		var n = this.count(),
