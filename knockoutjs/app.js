@@ -14,8 +14,8 @@ var App = function() {
 		cat.count( cat.count() + 1 );
 	};
 
-	self.changeCurrent = function(index) {
-		self.currentCat(self.catList()[index]);
+	self.changeCurrent = function(cat) {
+		self.currentCat(cat);
 	}
 };
 
