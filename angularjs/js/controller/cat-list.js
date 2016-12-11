@@ -5,5 +5,8 @@
     @Developed by Caue Queiroz	
 
 -------------------------------------------- */
-angular
-	.module('CatClicker', []);
+angular.module('CatClicker')
+    .controller('listCtrl', function() {
+
+    });
+    
