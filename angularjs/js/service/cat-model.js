@@ -16,7 +16,17 @@ angular.module('CatClicker')
         { name: 'Buttercup', src: 'img/cat-05.jpg', count: 3 },
     ];
 
+    this.currentCat = this.cats[0];
+
     this.getAllCats = function() {
         return this.cats;
+    };
+
+    this.getCat = function() {
+        return this.currentCat;
+    };
+
+    this.setCat = function(index) {
+        this.currentCat = this.cats[index];
     };
 });
