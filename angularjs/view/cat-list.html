@@ -1,4 +1,5 @@
 <ul>
-	<li ng-repeat="cat in list.cats" ng-class="{selected: list.isSelected(cat)}">{{ cat.name }}</li>
+	<li ng-repeat="cat in list.cats" ng-class="{selected: list.isSelected(cat)}"
+        ng-click="list.changeCat($index)">{{ cat.name }}</li>
 </ul>
-<div class="btn btn-large admin">+ add new cat {{ list.current.name }}</div>
+<div class="btn btn-large admin">+ add new cat</div>

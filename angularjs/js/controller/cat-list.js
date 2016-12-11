@@ -8,11 +8,22 @@
 angular.module('CatClicker')
 
 .controller('listCtrl', ['catModel', function(model) {
+    
+    // Import cats from model
+    // ========================================
     this.cats = model.getAllCats();
     this.current = model.getCat();
 
-    this.isSelected = function(item) {
-        return item.name === this.current.name;
+    // List methods
+    // ========================================
+    this.changeCat = function(index) {
+        model.setCat(index);
+        this.current = model.getCat();
     };
+
+    this.isSelected = function(cat) {
+        return cat.name === this.current.name;
+    };
+    
 }]);
     
