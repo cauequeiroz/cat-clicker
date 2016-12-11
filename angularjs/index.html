@@ -28,15 +28,7 @@
         </section>
 
         <!-- cat view -->
-        <section class="cat-view">
-            <div class="cat">
-                <p class="cat-info">
-                    <span class="cat-count"></span>
-                    <span class="cat-name"></span>
-                </p>
-                <img class="cat-img" src="">
-            </div>
-        </section>
+        <section class="cat-view" ng-include="'view/cat-info.html'" ng-controller="infoCtrl as cat"></section>
     </div>
 
     <!-- AngularJS -->
