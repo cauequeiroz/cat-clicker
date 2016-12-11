@@ -8,6 +8,9 @@
 angular.module('CatClicker')
 
 .service('catModel', function() {
+
+    // Initial cats database
+    // ========================================
     this.cats = [
         { name: 'Pixel', src: 'img/cat-01.jpg', count: 5 },
         { name: 'Garfield', src: 'img/cat-02.jpg', count: 1 },
@@ -18,6 +21,8 @@ angular.module('CatClicker')
 
     this.currentCat = this.cats[0];
 
+    // Model methods
+    // ========================================
     this.getAllCats = function() {
         return this.cats;
     };
