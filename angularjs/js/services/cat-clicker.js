@@ -1,12 +1,12 @@
 /* -----------------------------------------------
 
-    @Controller
-    Control Cat Clicker general functions.
+    @Service
+    Cat Clicker general data.
 
 ----------------------------------------------- */
 angular.module('CatClicker')
 
-.controller('CatClickerCtrl', function() {
+.service('CatClicker', function() {
 
     // Generate some cats
     // ------------------------------------------

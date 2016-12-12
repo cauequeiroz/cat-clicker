@@ -6,6 +6,12 @@
 ----------------------------------------------- */
 angular.module('CatClicker')
 
-.controller('ListCtrl', ['CatClickerCtrl', function(CatClicker) {
-    
+.controller('ListCtrl', ['CatClicker', function(model) {
+
+    // List methods
+    // ------------------------------------------
+    this.isSelected = function() {
+        return true;
+    };
+
 }]);
