@@ -23,7 +23,6 @@ angular.module('CatClicker')
     // Cat info methods
     // ------------------------------------------
     self.likeCat = function() {
-        console.log('caue');
         model.likeCat();
     };
 }]);

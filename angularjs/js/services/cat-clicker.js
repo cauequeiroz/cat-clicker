@@ -50,4 +50,8 @@ angular.module('CatClicker')
         this.adminPanel = true;
     };
 
+    this.closeAdmin = function() {
+        this.adminPanel = false;
+    };
+
 });

@@ -6,7 +6,7 @@
 ----------------------------------------------- */
 angular.module('CatClicker')
 
-.controller('ListCtrl', ['$scope','CatClicker', 'adminCtrl', function($scope, model, admin) {
+.controller('ListCtrl', ['$scope','CatClicker', function($scope, model) {
 
     // Controller reference
     // ------------------------------------------
@@ -27,7 +27,7 @@ angular.module('CatClicker')
     };
 
     self.openAdmin = function() {
-        console.log('open');
+        model.openAdmin();
     };
 
 }]);

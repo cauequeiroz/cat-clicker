@@ -6,7 +6,7 @@
 ----------------------------------------------- */
 angular.module('CatClicker')
 
-.controller('adminCtrl', ['CatClicker', function() {
+.controller('adminCtrl', ['$scope', 'CatClicker', function($scope, model) {
 
     // Controller reference
     // ------------------------------------------
@@ -14,16 +14,20 @@ angular.module('CatClicker')
 
     // Admin panel visibility
     // ------------------------------------------
-    self.show = false;
+    self.show = model.getAdminState();
+
+    $scope.$watch(function() { return model.getAdminState(); }, function(newVal) { 
+        self.show = newVal;
+    }, true);
 
     // Admin methods
     // ------------------------------------------
-    self.openAdmin = function() {
-        self.show = true;
+    self.closeAdmin = function() {
+        model.closeAdmin();
     };
 
-    self.closeAdmin = function() {
-        self.show = false;
+    self.saveAdmin = function() {
+        model.closeAdmin();
     };
 
 }]);
