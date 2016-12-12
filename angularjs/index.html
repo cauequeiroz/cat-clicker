@@ -18,7 +18,10 @@
 
         <!-- cat list -->
         <section class="cat-list" ng-controller="ListCtrl as list">
-            <ul></ul>
+            <ul>
+                <li ng-repeat="cat in list.cats" ng-class="{selected: list.isSelected(cat)}"
+                    ng-click="list.changeCat($index)">{{cat.name}}</li>
+            </ul>
             <div class="btn btn-large admin">+ add new cat</div>
         </section>
 
@@ -34,8 +37,8 @@
         <section class="cat-view">
             <div class="cat">
                 <p class="cat-info">
-                    <span class="cat-count">{{CatClicker.currentCat.count}}</span>
-                    <span class="cat-name">{{CatClicker.currentCat.name}}</span>
+                    <span class="cat-count"></span>
+                    <span class="cat-name"></span>
                 </p>
                 <img class="cat-img" src="">
             </div>

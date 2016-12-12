@@ -6,3 +6,8 @@
 
 ----------------------------------------------- */
 angular.module('CatClicker', []);
+
+// // TEMP
+// $scope.$watch(function() { return model.getCat(); }, function(newVal) { 
+//     console.log(newVal);
+// }, true);
