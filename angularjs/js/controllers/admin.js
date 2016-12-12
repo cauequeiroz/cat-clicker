@@ -20,14 +20,22 @@ angular.module('CatClicker')
         self.show = newVal;
     }, true);
 
+    // New cat models
+    // ------------------------------------------
+    self.newCat = { name: '', image: '' };
+
     // Admin methods
     // ------------------------------------------
     self.closeAdmin = function() {
+        self.newCat = { name: '', image: '' };
         model.closeAdmin();
     };
 
     self.saveAdmin = function() {
-        model.closeAdmin();
+        if ( self.newCat.name !== '' && self.newCat.image !== '' ) {
+            model.addCat(self.newCat);
+            model.closeAdmin();
+        }        
     };
 
 }]);

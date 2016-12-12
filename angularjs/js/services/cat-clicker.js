@@ -38,6 +38,16 @@ angular.module('CatClicker')
         this.currentCat.count++;
     };
 
+    this.addCat = function(cat) {
+        this.catList.push({
+            name: cat.name,
+            src: cat.image,
+            count: 0
+        });
+
+        this.currentCat = this.catList[this.catList.length - 1];
+    };
+
     // Admin methods and properties
     // ------------------------------------------
     this.adminPanel = false;
