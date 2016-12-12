@@ -26,7 +26,7 @@
         </section>
 
         <!-- add new cat -->
-        <section class="admin-form">
+        <section class="admin-form" ng-controller="adminCtrl as admin">
             <input type="text" class="name" placeholder="name">
             <input type="text" class="url" placeholder="image url">
             <div class="btn cancel">cancel</div>
@@ -52,5 +52,6 @@
     <script src="js/services/cat-clicker.js"></script>
     <script src="js/controllers/list.js"></script>
     <script src="js/controllers/info.js"></script>
+    <script src="js/controllers/admin.js"></script>
 </body>
 </html>
