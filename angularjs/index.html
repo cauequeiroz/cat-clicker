@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <link rel="stylesheet" href="main.css">
 </head>
-<body ng-app="CatClicker">
+<body>
     <div class="container">
 
         <!-- header -->
@@ -17,7 +17,10 @@
         </header>
 
         <!-- cat list -->
-        <section class="cat-list" ng-include="'view/cat-list.html'" ng-controller="listCtrl as list"></section>
+        <section class="cat-list">
+            <ul></ul>
+            <div class="btn btn-large admin">+ add new cat</div>
+        </section>
 
         <!-- add new cat -->
         <section class="admin-form">
@@ -28,17 +31,20 @@
         </section>
 
         <!-- cat view -->
-        <section class="cat-view" ng-include="'view/cat-info.html'" ng-controller="infoCtrl as info"></section>
+        <section class="cat-view"></section>
+        <script type="text/template" class="cat-template">
+            <div class="cat" data-id="%id%">
+                <p class="cat-info">
+                    <span class="cat-count">%count%</span>
+                    <span class="cat-name">%name%</span>
+                </p>
+                <img class="cat-img" src="%src%">
+            </div>
+        </script>
     </div>
 
-    <!-- AngularJS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
-    <!-- App -->
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
     <script src="js/app.js"></script>
-    <!-- Controller -->
-    <script src="js/controller/cat-list.js"></script>
-    <script src="js/controller/cat-info.js"></script>
-    <!-- Service -->
-    <script src="js/service/cat-model.js"></script>
 </body>
 </html>
