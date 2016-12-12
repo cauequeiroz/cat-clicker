@@ -34,4 +34,8 @@ angular.module('CatClicker')
         return this.catList;
     };
 
+    this.likeCat = function() {
+        this.currentCat.count++;
+    };
+
 });

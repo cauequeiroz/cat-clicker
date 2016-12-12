@@ -20,7 +20,10 @@ angular.module('CatClicker')
         self.cat = newVal;
     }, true);
 
-    // Cat methods
+    // Cat info methods
     // ------------------------------------------
-    
+    self.likeCat = function() {
+        console.log('caue');
+        model.likeCat();
+    };
 }]);
