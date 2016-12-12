@@ -17,32 +17,14 @@
         </header>
 
         <!-- cat list -->
-        <section class="cat-list" ng-controller="ListCtrl as list">
-            <ul>
-                <li ng-repeat="cat in list.cats" ng-class="{selected: list.isSelected(cat)}"
-                    ng-click="list.changeCat($index)">{{cat.name}}</li>
-            </ul>
-            <div class="btn btn-large admin" ng-click="list.openAdmin()">+ add new cat</div>
-        </section>
+        <section class="cat-list" ng-include="'views/list.html'" ng-controller="ListCtrl as list"></section>
 
         <!-- add new cat -->
-        <section class="admin-form" ng-controller="adminCtrl as admin" ng-show="admin.show">
-            <input type="text" class="name" placeholder="name" ng-model="admin.newCat.name">
-            <input type="text" class="url" placeholder="image url" ng-model="admin.newCat.image">
-            <div class="btn cancel" ng-click="admin.closeAdmin()">cancel</div>
-            <div class="btn save" ng-click="admin.saveAdmin()">add</div>
-        </section>
+        <section class="admin-form" ng-include="'views/admin.html'"
+            ng-controller="adminCtrl as admin" ng-show="admin.show"></section>
 
         <!-- cat view -->
-        <section class="cat-view" ng-controller="infoCtrl as info">
-            <div class="cat">
-                <p class="cat-info">
-                    <span class="cat-count">{{info.cat.count}}</span>
-                    <span class="cat-name">{{info.cat.name}}</span>
-                </p>
-                <img class="cat-img" ng-src="{{info.cat.src}}" ng-click="info.likeCat()">
-            </div>
-        </section>
+        <section class="cat-view" ng-include="'views/info.html'" ng-controller="infoCtrl as info"></section>
     </div>
 
     <!-- AngularJS -->

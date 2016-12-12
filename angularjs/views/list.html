@@ -1,0 +1,5 @@
+<ul>
+    <li ng-repeat="cat in list.cats" ng-class="{selected: list.isSelected(cat)}"
+        ng-click="list.changeCat($index)">{{cat.name}}</li>
+</ul>
+<div class="btn btn-large admin" ng-click="list.openAdmin()">+ add new cat</div>
