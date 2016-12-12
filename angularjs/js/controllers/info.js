@@ -7,5 +7,20 @@
 angular.module('CatClicker')
 
 .controller('infoCtrl', ['$scope', 'CatClicker', function($scope, model) {
-    this.cat = model.getCat();
+    
+    // Controller reference
+    // ------------------------------------------
+    var self = this;
+
+    // Get current cat
+    // ------------------------------------------
+    self.cat = model.getCat();
+
+    $scope.$watch(function() { return model.getCat(); }, function(newVal) { 
+        self.cat = newVal;
+    }, true);
+
+    // Cat methods
+    // ------------------------------------------
+    
 }]);
