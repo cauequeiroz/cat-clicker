@@ -7,7 +7,7 @@
 ----------------------------------------------- */
 angular.module('CatClicker', []);
 
-// // TEMP
-// $scope.$watch(function() { return model.getCat(); }, function(newVal) { 
-//     console.log(newVal);
+
+// $scope.$watch(function() { return ServiceName.getInfo(); }, function(newVal) { 
+//     MyController.info = newVal;
 // }, true);
