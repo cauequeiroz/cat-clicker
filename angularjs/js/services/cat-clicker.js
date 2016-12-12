@@ -30,4 +30,8 @@ angular.module('CatClicker')
         this.currentCat = this.catList[index];
     };
 
+    this.getAllCats = function() {
+        return this.catList;
+    };
+
 });
