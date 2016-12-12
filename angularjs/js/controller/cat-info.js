@@ -8,5 +8,5 @@
 angular.module('CatClicker')
 
 .controller('infoCtrl', ['catModel', function(model) {
-
+    this.cat = model.getCat();
 }]);
