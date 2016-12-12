@@ -34,13 +34,13 @@
         </section>
 
         <!-- cat view -->
-        <section class="cat-view">
+        <section class="cat-view" ng-controller="infoCtrl as info">
             <div class="cat">
                 <p class="cat-info">
-                    <span class="cat-count"></span>
-                    <span class="cat-name"></span>
+                    <span class="cat-count">{{info.cat.count}}</span>
+                    <span class="cat-name">{{info.cat.name}}</span>
                 </p>
-                <img class="cat-img" src="">
+                <img class="cat-img" ng-src="{{info.cat.src}}">
             </div>
         </section>
     </div>
