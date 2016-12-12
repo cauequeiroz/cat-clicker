@@ -6,7 +6,7 @@
 ----------------------------------------------- */
 angular.module('CatClicker')
 
-.controller('ListCtrl', ['$scope','CatClicker', function($scope, model) {
+.controller('ListCtrl', ['CatClicker', function(model) {
 
     // Controller reference
     // ------------------------------------------
