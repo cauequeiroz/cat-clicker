@@ -1,7 +1,7 @@
 /* -----------------------------------------------
 
     @Service
-    Cat Clicker general data.
+    Cat Clicker general data and methods.
 
 ----------------------------------------------- */
 angular.module('CatClicker')
@@ -36,6 +36,18 @@ angular.module('CatClicker')
 
     this.likeCat = function() {
         this.currentCat.count++;
+    };
+
+    // Admin methods and properties
+    // ------------------------------------------
+    this.adminPanel = false;
+
+    this.getAdminState = function() {
+        return this.adminPanel;
+    };
+
+    this.openAdmin = function() {
+        this.adminPanel = true;
     };
 
 });

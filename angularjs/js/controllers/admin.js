@@ -16,4 +16,14 @@ angular.module('CatClicker')
     // ------------------------------------------
     self.show = false;
 
+    // Admin methods
+    // ------------------------------------------
+    self.openAdmin = function() {
+        self.show = true;
+    };
+
+    self.closeAdmin = function() {
+        self.show = false;
+    };
+
 }]);

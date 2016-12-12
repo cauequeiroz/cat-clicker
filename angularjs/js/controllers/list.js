@@ -6,7 +6,7 @@
 ----------------------------------------------- */
 angular.module('CatClicker')
 
-.controller('ListCtrl', ['$scope','CatClicker', function($scope, model) {
+.controller('ListCtrl', ['$scope','CatClicker', 'adminCtrl', function($scope, model, admin) {
 
     // Controller reference
     // ------------------------------------------
@@ -14,16 +14,20 @@ angular.module('CatClicker')
 
     // Get all cats
     // ------------------------------------------
-    this.cats = model.getAllCats();
+    self.cats = model.getAllCats();
 
     // List methods
     // ------------------------------------------
-    this.isSelected = function(cat) {
+    self.isSelected = function(cat) {
         return cat.name === model.getCat().name;
     };
 
-    this.changeCat = function(index) {
+    self.changeCat = function(index) {
         model.setCat(index);
+    };
+
+    self.openAdmin = function() {
+        console.log('open');
     };
 
 }]);

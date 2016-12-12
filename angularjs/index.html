@@ -22,14 +22,14 @@
                 <li ng-repeat="cat in list.cats" ng-class="{selected: list.isSelected(cat)}"
                     ng-click="list.changeCat($index)">{{cat.name}}</li>
             </ul>
-            <div class="btn btn-large admin">+ add new cat</div>
+            <div class="btn btn-large admin" ng-click="list.openAdmin()">+ add new cat</div>
         </section>
 
         <!-- add new cat -->
-        <section class="admin-form" ng-controller="adminCtrl as admin">
+        <section class="admin-form" ng-controller="adminCtrl as admin" ng-show="admin.show">
             <input type="text" class="name" placeholder="name">
             <input type="text" class="url" placeholder="image url">
-            <div class="btn cancel">cancel</div>
+            <div class="btn cancel" ng-click="admin.closeAdmin()">cancel</div>
             <div class="btn save">add</div>
         </section>
 
@@ -50,8 +50,8 @@
     
     <script src="js/app.js"></script>
     <script src="js/services/cat-clicker.js"></script>
-    <script src="js/controllers/list.js"></script>
-    <script src="js/controllers/info.js"></script>
     <script src="js/controllers/admin.js"></script>
+    <script src="js/controllers/list.js"></script>
+    <script src="js/controllers/info.js"></script>    
 </body>
 </html>
